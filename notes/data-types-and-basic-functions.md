@@ -123,23 +123,64 @@ let pet = {
   breed: "husky"
 }
 
+const stores = [
+  {
+    street: "123 Elm St",
+    city: "Metropolis",
+    state: "Kansas",
+    phone: "812-734-9887",
+    open: "8am - 7pm",
+    pets: [
+      {
+        name: "Ace",
+        age: 5,
+        type: "dog",
+        breed: "husky"
+      },
+      {
+        name: "Rover",
+        age: 7,
+        type: "dog",
+        breed: "doberman"
+      },
+      {
+        name: "Selene",
+        age: 3,
+        type: "cat",
+        breed: "maine coon"
+      },
+      {
+        name: "Penny",
+        age: 8,
+        type: "cat",
+        breed: "domestic short hair"
+      },
+
+    ]
+  }
+]
+
+
 // 2.
 
-function validPassword (string) {
-    if (length.string > 7) {
-      console.log("good to go")
+function validPassword(string) {
+    if (string.length > 7) {
+      return true
     } else {
-      console.log("too short")
+      return false
     }
+}
+
+function validPassword(string){
+  return string.length > 7
 }
 
 // 3.
 
 function evenifier (number) {
-    if (number % 2 == 0) {
+    if (number % 2 === 0) {
       return number
-    }
-    else {
+    } else {
       return number*2
     }
 }
@@ -152,7 +193,8 @@ let person = {
   occupation: "Developer"
 }
 
-function whoAmI () {
-  console.log(`Hi, my name is person["name"]. I am  years person["age"] old and I work as a person["occupation"].`)
+
+function whoAmI (dude) {
+  console.log(`Hi, my name is ${dude["name"]}. I am  years ${dude["age"]} old and I work as a ${dude["occupation"]}.`)
 }
 ```
